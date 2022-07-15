@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ArcadeContext from '../context/arcadeContext';
 
-class Header extends React.Component {
-  render() {
-    return<div>Bleh</div>
-  }
+export default function Header() {
+  const { playerName } = useContext(ArcadeContext);
+  return (
+    <header>
+      <h1>MUD0W'S 4RC4D3</h1>
+      <p>{playerName}</p>
+    </header>
+  );
 }
-
-export default Header;
